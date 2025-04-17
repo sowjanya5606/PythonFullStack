@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load static %}
+<title>Upload Image</title>
+{% block content %}
+  <h1>Upload an Image to Sketchify</h1>
+  <a href="{% url 'gallery' %}">View Your Gallery</a>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Generate Sketch</button>
+  </form>
+{% endblock %}

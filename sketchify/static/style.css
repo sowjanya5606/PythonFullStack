@@ -1,0 +1,176 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background: linear-gradient(to right, #e0c3fc, #8ec5fc);
+    color: #333;
+    min-height: 100vh;
+}
+.navbar {
+    background: linear-gradient(90deg, #e97f91, #ee8db5);
+    padding: 2em 5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0.4vw 1vw rgba(0, 0, 0, 0.1);
+}
+.navbar .nav-left a {
+    color: white;
+    text-decoration: none;
+    margin-right: 1.5em;
+    font-weight: bold;
+    transition: transform 0.2s ease;
+    align-items: center;
+}
+.navbar .nav-left a:hover {
+    transform: scale(1.4);
+    text-shadow: 0.2vw 0.2vw 0.4vw #444;
+    color: blueviolet;
+}
+.container {
+    text-align: center;
+    padding: 4em 2em;
+    background: rgba(255, 255, 255, 0.8);
+    margin: 8em auto;
+    border-radius: 0.6vw;
+    max-width: 40vw;
+    box-shadow: 0 0.8vw 1vw rgba(0, 0, 0, 0.15);
+}
+h1 {
+    font-size: 2.8em;
+    color: #6a11cb;
+    margin-bottom: 0.4em;
+}
+p {
+    font-size: 1.2em;
+    color: #333;
+}
+a {
+    font-size: 1.3em;
+    color: #6a11cb;
+    font-weight: bold;
+    text-decoration: underline;
+}
+a:hover {
+    color: black;
+}
+form {
+    margin: 0em auto;
+    max-width: 40vw;
+    padding: 0.2vw;
+}
+input[type="text"],
+input[type="password"] {
+    width: 28%;
+    padding: 0.4em;
+    margin: 1em 0;
+    border: 0.1vh solid #ccc;
+    border-radius: 0.3vw;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #8e44ad;
+    box-shadow: 0 0 0.5vw rgba(142, 68, 173, 0.4);
+    outline: none;
+}
+form + p {
+    text-align: center;
+    margin-top: 1em;
+    font-size: 0.95em;
+}
+form + p a {
+    color: #8e44ad;
+    font-weight: bold;
+    text-decoration: none;
+}
+button {
+    padding: 0.8vw 0.9vw;
+    background-color: #4CAF50;
+    font-size: 1.2em;
+    color: white;
+    border: none;
+    border-radius: 0.3vw;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+button:hover {
+    background-color: #45a049;
+}
+.gallery img {
+    width: 200px;
+    margin-right: 10px;
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.gallery div {
+    margin-bottom: 20px;
+}
+.gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    padding: 2em;
+}
+.image-pair {
+    display: flex;
+    justify-content: space-around;
+    gap: 3em;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 1.5em;
+    border-radius: 0.5vw;
+    box-shadow: 0 0 1vw rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 80vw;
+}
+.image-pair img {
+    width:15vw;
+    height: auto;
+    border-radius: 8px;
+    border: 0.2vh solid #ddd;
+}
+.image-pair h3 {
+    text-align: center;
+    margin-bottom: 0.5em;
+    color: #6a11cb;
+}
+.image-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.image-pair img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(106, 17, 203, 0.4);
+}
+
+.download-btn {
+    margin-top: 1em;
+    background-color: #6a11cb;
+    color: white;
+    padding: 0.6em 1.2em;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #4e0fc6;
+}
+
+/* 📱 Mobile responsiveness */
+@media (max-width: 600px) {
+    .image-pair {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-pair img {
+        width: 90vw;
+    }
+}

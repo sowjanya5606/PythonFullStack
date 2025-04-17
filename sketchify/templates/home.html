@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sketch Generator - Home</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="{% url 'home' %}">🏠 Home</a>
+            {% if user.is_authenticated %}
+                <a href="{% url 'upload' %}">📤 Upload</a>
+                <a href="{% url 'gallery' %}">🖼️ Gallery</a>
+                <a href="{% url 'logout' %}">🚪 Logout</a>
+            {% else %}
+                <a href="{% url 'login' %}">🔐 Login</a>
+                <a href="{% url 'register' %}">📝 Register</a>
+            {% endif %}
+        </div>
+    </nav>
+    <div class="container">
+        <h1>Welcome to Sketch Generator 🎨</h1>
+        <p>Turn your photos into pencil sketches instantly.</p>
+        {% if user.is_authenticated %}
+            <p>Start by uploading an image from the Upload page.</p>
+        {% else %}
+            <p><a href="{% url 'login' %}">Log in</a> to start generating your sketches!</p>
+        {% endif %}
+    </div>
+</body>
+</html>

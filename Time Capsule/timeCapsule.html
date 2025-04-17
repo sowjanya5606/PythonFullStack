@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Time Capsule</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div id="sky"></div>
+    <div class="container">
+        <h1 id="greeting">Welcome to Your Time Capsule</h1>
+        <p id="message">A unique experience that evolves with time.</p>
+        <div id="memories"></div>
+    </div>
+    <input type="file" id="fileInput" accept="image/*" style="display:none;">
+    <div id="imagePreview" style="display:none;">
+        <img id="snapshotImage" alt="Your Snapshot" style="max-width: 100%; margin-top: 10px;">
+    </div>
+    <input type="file" id="musicInput" accept="audio/*" style="display:none;">
+    <audio id="musicPlayer" controls style="display:none; margin-top: 10px;">
+        <source id="musicSource">
+    </audio>
+    <div id="memoryVault" style="margin-top: 30px;">
+        <h2>Your Memory Vault 🧠</h2><br>
+        <div id="quoteDisplay"></div><br>
+        <div id="noteDisplay"></div><br>
+        <div id="dreamDisplay"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

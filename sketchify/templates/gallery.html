@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+<title>Your Sketch Gallery</title>
+{% load static %}
+{% block content %}
+<h1>Your Sketch Gallery</h1>
+<a href="{% url 'upload' %}">Upload Another Image</a>
+<div class="gallery">
+  {% for image in images %}
+  <div class="image-pair">
+      <div class="image-block">
+          <h3>Original</h3>
+          <img src="{{ image.original.url }}" alt="Original Image">
+      </div>
+      <div class="image-block">
+          <h3>Sketch</h3>
+          <img src="{{ image.sketch.url }}" alt="Sketch Image">
+          <a href="{{ image.sketch.url }}" download class="download-btn">Download Sketch</a>
+      </div>
+  </div>
+  {% endfor %}
+</div>
+<p>No images yet. <a href="{% url 'upload' %}">Upload one</a></p>
+{% endblock %}
